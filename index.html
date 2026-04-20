@@ -1,8 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#b9846f">
+    <meta name="description" content="Dijual cepat rumah hook strategis Ciganjur Jakarta Selatan. 799 m² tanah, 400 m² bangunan, 7 kamar tidur, 3 kamar mandi, SHM & IMB lengkap. Cocok untuk kost, kontrakan, usaha, atau investasi.">
+    <meta property="og:title" content="DIJUAL CEPAT – RUMAH HOOK STRATEGIS CIGANJUR (JAKARTA SELATAN)">
+    <meta property="og:description" content="Rumah hook vintage classic di Jl. Swadaya Gudang Baru No.38 Ciganjur. Akses 1 mobil+1 motor, carport 5 mobil, cocok untuk kost, kontrakan, kantor atau investasi.">
+    <meta property="og:image" content="img/house%20(1).jpg">
+    <meta property="og:url" content="https://maps.app.goo.gl/UsRYLTaGwu9iJASKA">
     <!-- Ubuntu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,21 +18,26 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Logo -->
-    <link rel="icon" href="img/house1.jpg">
+    <link rel="icon" href="img/house%20(1).jpg">
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Feather Icon -->
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         tailwind.config = {
-            darkMode : 'class',
+            darkMode: 'class',
             theme: {
-                extend : {
-                    colors : {
-                        primary : '#14b8a6'
+                extend: {
+                    colors: {
+                        primary: '#845231',
+                        vintage: '#3b2818',
+                        sand: '#f3e1ca',
+                        stone: '#7c5b48',
+                        rust: '#b9846f',
+                        parchment: '#efe1d0'
                     },
-                    fontFamily : {
-                        Ubuntu : ['Ubuntu']
+                    fontFamily: {
+                        Ubuntu: ['Ubuntu', 'sans-serif']
                     }
                 }
             }
@@ -47,284 +58,287 @@
             @apply -rotate-45;
         }
         .hamburger-active > span:nth-child(2) {
-            @apply scale-0
+            @apply scale-0;
         }
         .navbar-fixed {
             @apply fixed z-[9999];
             backdrop-filter: blur(5px);
             box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-            
+        }
+        .hero-badge {
+            @apply inline-flex items-center gap-2 rounded-full bg-rust/15 px-4 py-2 text-sm font-semibold text-vintage;
+        }
+        .gallery-thumb {
+            @apply w-full rounded-3xl object-cover border border-transparent shadow-lg transition-all duration-300;
+        }
+        .gallery-thumb:hover {
+            @apply border-rust ring-2 ring-rust/40;
+        }
+        .gallery-thumb.active {
+            @apply ring-4 ring-rust/50 border-rust;
+        }
+        .photo-wall img {
+            @apply h-40 w-full rounded-2xl object-cover;
         }
     </style>
-    <title>Bar House</title>
+    <title>DIJUAL CEPAT – RUMAH HOOK STRATEGIS CIGANJUR (JAKARTA SELATAN)</title>
 </head>
-<body>
-    <!-- Navbar start -->
-    
-        <nav id="nav" class="w-full bg-slate-200 flex justify-between items-center h-16 ">
-            <div class="title">
-                <h1 class="font-semibold p-4 text-sm md:text-lg font-Ubuntu">BAR HOUSE</h1>
-            </div>
-            <div class="flex items-center">
-                <button id="hamburger" class="block absolute right-4 md:hidden">
-                    <span class="hamburger-line origin-top-left transition duration-100" style="background-color: white;"></span>
-                    <span class="hamburger-line transition duration-100" style="background-color: white;"></span>
-                    <span class="hamburger-line origin-bottom-left transition duration-100" style="background-color: white;"></span>
-                </button>          
-                <ul id="nav-menu" class=" md:flex hidden z-[9999] bg-slate-200 mt-[24rem] md:mt-0 mr-7 rounded-md" id="menuList">
-                    <li class="group-flex"><a href="#home" class="text-base text-slate-900 hover:text-white transition-all duration-100 pl-6 pr-10 md:px-6 " style="line-height: 3;">Home</a></li>
-                    <li class="group-flex"><a href="#layanan" class="text-base pl-6 pr-10 md:px-6  text-slate-900 hover:text-white transition-all duration-100" style="line-height: 3;">Layanan</a></li>
-                    <li class="group-flex"><a href="#project" class="text-base md:px-6 text-slate-900 hover:text-white transition-all duration-100 pl-6 pr-10" style="line-height: 3;">Project</a></li>
-                    <li class="group-flex"><a href="#pembelian" class="text-base pl-6 pr-10 md:px-6  mt-4 text-slate-900 hover:text-white transition-all duration-100" style="line-height: 3;">Pembelian</a></li>
-                     <li class="group-flex"><a href="#client" class="text-base pl-6 pr-10 md:px-6 text-slate-900 hover:text-white text-nowrap transition-all duration-100" style="line-height: 3;">Feedback client</a></li>
-                    <li class="group-flex"><a href="#contact" class="text-base pl-6 pr-10 md:px-6 text-slate-900 hover:text-white transition-all duration-100" style="line-height: 3;">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    <!-- Navbar end -->
-    <!-- Home Section -->
-    <section id="home" class="pt-16 md:pb-40 pb-16 bg-slate-200">
-        <div class="container md:flex md:justify-center md:items-center px-6 w-full" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-            <div class="title sm:w-1/2">
-                <h2 class="text-sm md:text-3xl font-Ubuntu" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"> WAKTUNYA BERTEMU</h2>
-                <h1 class="font-bold text-6xl sm:min-w-full lg:text-9xl pt-6 font-Ubuntu" >RUMAH<br>BARU</h1>
-                <p class="pt-5 text-base md:text-xl sm:pr-16" style="opacity: .6; font-size: 14px;" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Menemukan tempat yang tepat untuk dijadikan rumah bisa jadi sulit, Tim Kreatif dan spesialis kami membuat real estat menjadi lebih mudah.</p>
+<body class="bg-sand text-vintage">
+    <nav id="nav" class="w-full bg-white/95 backdrop-blur-sm flex justify-between items-center h-16 px-6 md:px-10 shadow-sm">
+        <div class="title">
+            <a href="#home" class="font-bold text-lg md:text-xl font-Ubuntu tracking-wide">DIJUAL CEPAT CIGANJUR</a>
+        </div>
+        <div class="flex items-center">
+            <button id="hamburger" class="block absolute right-4 md:hidden text-vintage">
+                <span class="hamburger-line origin-top-left transition duration-100 bg-vintage"></span>
+                <span class="hamburger-line transition duration-100 bg-vintage"></span>
+                <span class="hamburger-line origin-bottom-left transition duration-100 bg-vintage"></span>
+            </button>
+            <ul id="nav-menu" class="md:flex hidden z-[9999] bg-white/95 shadow-lg rounded-full py-2 px-3 gap-2">
+                <li><a href="#home" class="text-sm text-vintage hover:text-rust transition">Home</a></li>
+                <li><a href="#detail" class="text-sm text-vintage hover:text-rust transition">Detail</a></li>
+                <li><a href="#gallery" class="text-sm text-vintage hover:text-rust transition">Galeri</a></li>
+                <li><a href="#location" class="text-sm text-vintage hover:text-rust transition">Lokasi</a></li>
+                <li><a href="#contact" class="text-sm text-vintage hover:text-rust transition">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
 
-                <span class="absolute my-8" style="background-color: slategray; width: 33px;height: 6px; "></span>
-            </div>
-            <div class="image-home pt-20 sm:w-1/2">
-                <img src="img/house2.jpg" alt="" class="min-w-full rounded-md shadow-xl shadow-slate-600" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-            </div>
-        </div>
-    </section>
-    <!-- Home Section end -->
-    <!-- Layanan start -->
-    <section id="layanan" class="py-16 px-5" style="background-color: #0a0f0f;">
-        <div class="container w-full md:flex md:justify-around md:items-start md:px-20 ">
-                <h1 class="font-semibold text-white text-3xl md:text-5xl pb-8" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">APA YANG KAMI TAWARKAN</h1>
-            <div class="caption-layanan md:w-1/2">
-                <div class="experience md:flex md:justify-center md:items-center pb-10 md:pb-20">
-                    <div class="experience-logo py-4 md:w-20 md:px-4">
-                        <i data-feather="sun" class="text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"></i>
+    <section id="home" class="pt-20 pb-24 bg-gradient-to-b from-sand via-parchment to-white">
+        <div class="container mx-auto px-6 md:flex md:items-center md:justify-between">
+            <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="700">
+                <span class="hero-badge">DIJUAL CEPAT • RUMAH HOOK</span>
+                <h1 class="mt-6 text-4xl md:text-6xl font-bold leading-tight">Rumah Hook Strategis Ciganjur<br class="hidden sm:block">Jakarta Selatan</h1>
+                <p class="mt-6 max-w-2xl text-base md:text-lg text-slate-700">Rumah vintage classic corner lot 799 m² tanah dan 400 m² bangunan. Hadap Timur, akses jalan 1 mobil + 1 motor, carport 5 mobil, sangat cocok untuk kost, kontrakan, kantor, usaha, atau investasi jangka panjang.</p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-vintage px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-vintage/20 hover:bg-stone transition">Tanya Sekarang</a>
+                    <a href="https://maps.app.goo.gl/UsRYLTaGwu9iJASKA" target="_blank" class="inline-flex items-center justify-center rounded-full border border-vintage bg-white px-6 py-3 text-sm font-semibold text-vintage hover:bg-vintage/5 transition">Lihat Lokasi</a>
+                </div>
+                <div class="mt-10 grid gap-4 sm:grid-cols-2">
+                    <div class="rounded-3xl bg-white p-5 shadow-lg">
+                        <p class="text-xs uppercase tracking-[0.2em] text-stone">Luas Tanah</p>
+                        <p class="mt-3 text-2xl font-bold">799 m²</p>
                     </div>
-                    <div class="caption-experience">
-                        <h2 class="text-white font-medium text-lg md:text-2xl pb-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">TIM BERPENGALAMAN</h2>
-                        <p class="text-sm text-white " data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Masing-masing dari kita adalah ahli dalam keahlian kita. kita telah bekerja selama beberapa tahun di bidang kita dan masing-masing memiliki semangat dan visi kreatif untuk setiap proyek yang kita kerjakan.</p>
+                    <div class="rounded-3xl bg-white p-5 shadow-lg">
+                        <p class="text-xs uppercase tracking-[0.2em] text-stone">Luas Bangunan</p>
+                        <p class="mt-3 text-2xl font-bold">400 m²</p>
+                    </div>
+                    <div class="rounded-3xl bg-white p-5 shadow-lg">
+                        <p class="text-xs uppercase tracking-[0.2em] text-stone">Kamar Tidur</p>
+                        <p class="mt-3 text-2xl font-bold">7</p>
+                    </div>
+                    <div class="rounded-3xl bg-white p-5 shadow-lg">
+                        <p class="text-xs uppercase tracking-[0.2em] text-stone">Carport</p>
+                        <p class="mt-3 text-2xl font-bold">5 Mobil</p>
                     </div>
                 </div>
-                
-                <div class="experience md:flex md:justify-center md:items-center pb-10 md:pb-20">
-                    <div class="experience-logo py-4 md:w-20 md:px-4">
-                        <i data-feather="sun" class="text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"></i>
-                    </div>
-                     <div class="caption-experience">
-                        <h2 class="text-white font-medium text-lg md:text-2xl pb-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">KUALITAS NOMOR SATU</h2>
-                        <p class="text-sm text-white " data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Kami sangat memperhatikan setiap detail, karena kami tahu bahwa kami bertanggung jawab untuk menciptakan tempat berlindung yang aman bagi seseorang. Kami bermitra dengan pengrajin terbaik untuk memastikan kualitas terkenal kami.</p>
-                    </div>
-                </div>
-              
-                
-                <div class="experience md:flex md:justify-center md:items-center pb-10">
-                   <div class="experience-logo py-4 md:w-20 md:px-4">
-                        <i data-feather="sun" class="text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"></i>
-                    </div>
-                    <div class="caption-experience">
-                        <h2 class="text-white font-medium text-lg md:text-2xl pb-2"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">VISIONARIS MASA DEPAN</h2>
-                        <p class="text-sm text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Kami tidak takut untuk melampaui cakrawala. Sebagai visioner masa depan, kami tidak akan menolak eksperimen, material yang tidak biasa, atau kombinasi yang tidak terduga.</p>
-                    </div>
+            </div>
+            <div class="mt-12 md:mt-0 md:w-1/2" data-aos="fade-left" data-aos-duration="700">
+                <div class="relative rounded-[2rem] overflow-hidden shadow-[0_35px_60px_-20px_rgba(59,40,24,0.35)]">
+                    <img src="img/house%20(1).jpg" alt="Rumah Hook Ciganjur" class="w-full object-cover" />
                 </div>
             </div>
         </div>
     </section>
-    <!-- Layanan end -->
 
-    <!-- Project start -->
-    <section id="project" class="py-28 px-3 bg-slate-200">
-        <div class="container w-full">
-            <div class="title md:flex md:justify-around px-5 md:px-10">
-                <h1 class="text-3xl md:text-5xl font-bold font-Ubuntu pb-4 md:w-[60%]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    PROJECT<br>TERAKHIR
-                </h1>
-                <p class="text-sm text-slate-700 md:w-[40%]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    Tim BarHouse terus berupaya mencapai kesempurnaan. Kami beruntung bisa bekerja dengan klien terkemuka dan terkenal, yang mempercayai kami dan membiarkan kami membimbing mereka dengan visi kreatif kami, mewujudkan impian real estat mereka.
-                </p>
+    <section id="detail" class="py-24 px-6 md:px-10 bg-white">
+        <div class="container mx-auto">
+            <div class="max-w-3xl text-center mx-auto mb-12" data-aos="fade-up" data-aos-duration="700">
+                <h2 class="text-3xl md:text-5xl font-bold font-Ubuntu">Detail Properti</h2>
+                <p class="mt-4 text-slate-600">Rumah komersial hook strategis Jl. Swadaya Gudang Baru No.38, Ciganjur, Jagakarsa. Legal lengkap SHM & IMB. Ideal untuk investor, kost eksklusif, kontrakan, kantor, atau usaha.</p>
             </div>
-            <div class="description-project pt-16 px-5">
-                <img src="img/house1.jpg" alt="" class="md:w-[70%] mx-auto" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                <div class="caption md:flex md:justify-between pt-3 md:pt-14 md:gap-10">
-                    <div class="sunshine md:w-[40%]">
-                        <h2 class="font-bold text-2xl md:text-3xl md:pb-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                            SUNSHINE BAY RESIDENCE
-                        </h2>
-                        <p class=" font-medium pt-2 md:pt-0 text-slate-400 text-sm md:text-xl" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">RUMAH 3 KAMAR TIDUR DI PINGGIRAN INDAH</p>
-                        <p class="font-medium pt-3 md:pt-0 text-slate-600 text-xl md:text-2xl" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                            Rp.200.000.000
-                        </p>
-                    </div>
-                    <div class="md:w-[60%] pt-4">
-                        <p class="text-sm font-medium text-slate-500 " data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Dilengkapi dengan AC, 3 kamar tidur di dalam suite, dan area dapur ruang tamu terbuka yang luas, Sunshine Bay Residences adalah pilihan tepat bagi siapa pun yang memimpikan tempat berlindung yang aman. Terletak di lingkungan tinggal yang damai dan ramah anak, Sunshine Bay memiliki semua fasilitas yang bisa Anda harapkan dari pinggiran kota yang dipilih sebagai 'terbaik di negara bagian' selama 3 tahun berjalan. Baik Anda ingin bermain sepak bola bersama anak-anak Anda di halaman, atau mengundang teman untuk makan malam, tersedia tempat untuk itu di Sunshine Bay.</p>
+            <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+                <div class="rounded-[2rem] bg-sand p-8 shadow-xl" data-aos="fade-right" data-aos-duration="700">
+                    <p class="text-sm uppercase tracking-[0.24em] text-stone">Properti Utama</p>
+                    <h3 class="mt-5 text-2xl font-semibold">Rumah Hook Vintage Classic</h3>
+                    <p class="mt-4 text-slate-700">Corner lot hook dengan bangunan luas. Hadap Timur, akses jalan 1 mobil + 1 motor, carport 5 mobil, kondisinya vintage classic dan siap untuk segera dijual.</p>
+                    <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                        <div class="rounded-3xl bg-white p-5 border border-stone/10">
+                            <p class="text-sm text-stone">Kamar Mandi</p>
+                            <p class="mt-3 text-xl font-bold">3</p>
+                        </div>
+                        <div class="rounded-3xl bg-white p-5 border border-stone/10">
+                            <p class="text-sm text-stone">Kamar ART</p>
+                            <p class="mt-3 text-xl font-bold">1</p>
+                        </div>
+                        <div class="rounded-3xl bg-white p-5 border border-stone/10">
+                            <p class="text-sm text-stone">Kamar Mandi ART</p>
+                            <p class="mt-3 text-xl font-bold">1</p>
+                        </div>
+                        <div class="rounded-3xl bg-white p-5 border border-stone/10">
+                            <p class="text-sm text-stone">Akses Jalan</p>
+                            <p class="mt-3 text-xl font-bold">1 Mobil + 1 Motor</p>
+                        </div>
                     </div>
                 </div>
-                <div class="columns-1 sm:columns-2 w-full pt-6 sm:pt-14 sm:flex max-h-full pb-10 sm:justify-center sm:flex-wrap">
-                    <img src="img/livroom1.jpg" alt="" class="md:px-4 sm:w-[40%]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <img src="img/broom1.jpg" alt="" class="pt-5 md:px-4 sm:w-[40%]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <img src="img/kitchen1.jpg" alt="" class="pt-5 md:px-4 sm:w-[40%]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">                 
-                </div>
-                <div class="w-full text-end sm:text-center sm:pt-5">
-                    <a href="./webconnect/sunshine.html" class="bg-slate-950 text-white hover:bg-slate-900 p-3 text-sm sm:text-xl ml-4  mt-36">SELENGKAPNYA</a>
-                </div>
-            </div>
-            <div class="pt-20 sm:pt-28">
-                <h1 class="text-2xl font-bold sm:text-7xl pb-10 sm:px-8" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">LIHAT PROJECT KAMI<br> YANG LAINNYA</h1>
-                <div class="sm:flex sm:justify-center w-full sm:gap-7 sm:px-20">
-                    <div class="pb-6">
-                        <a href="./webconnect/britz.html" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                            <img src="img/house3.jpg" alt="" class="rounded-md pt-5 pb-4 md:py-5 hover:opacity-70">
-                        </a>
-                        <h3 class="text-xl md:text-3xl font-bold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                            BRITZ TOP RESIDENCE
-                        </h3>
+                <div class="space-y-6">
+                    <div class="rounded-[2rem] bg-vintage/5 p-8 shadow-xl" data-aos="fade-left" data-aos-duration="700">
+                        <h3 class="text-2xl font-semibold">Spesifikasi Lengkap</h3>
+                        <ul class="mt-6 space-y-3 text-slate-700">
+                            <li class="rounded-3xl bg-white p-4 shadow-sm">7 Kamar Tidur</li>
+                            <li class="rounded-3xl bg-white p-4 shadow-sm">3 Kamar Mandi Utama</li>
+                            <li class="rounded-3xl bg-white p-4 shadow-sm">1 Kamar ART</li>
+                            <li class="rounded-3xl bg-white p-4 shadow-sm">1 Kamar Mandi ART</li>
+                            <li class="rounded-3xl bg-white p-4 shadow-sm">Carport untuk 5 Mobil</li>
+                            <li class="rounded-3xl bg-white p-4 shadow-sm">Bentuk Corner Lot / Hook</li>
+                            <li class="rounded-3xl bg-white p-4 shadow-sm">Hadap Timur</li>
+                            <li class="rounded-3xl bg-white p-4 shadow-sm">Status SHM & IMB Lengkap</li>
+                        </ul>
                     </div>
-                    <div class="pt-3">
-                        <a href="./webconnect/pademangan.html" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                            <img src="img/house4.jpg" alt="" class="rounded-md py-5 md:py-5 hover:opacity-70">
-                        </a>
-                        <h3 class="text-xl md:text-3xl font-bold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                            PADEMANGAN GEM INN
-                        </h3>
+                    <div class="rounded-[2rem] bg-white p-8 border border-stone/10 shadow-xl" data-aos="fade-left" data-aos-duration="700">
+                        <h3 class="text-2xl font-semibold">Potensi & Kelebihan</h3>
+                        <ul class="mt-6 space-y-3 text-slate-700">
+                            <li class="flex items-start gap-3"><span class="mt-1 text-rust">•</span> Lokasi hook → akses & visibilitas tinggi.</li>
+                            <li class="flex items-start gap-3"><span class="mt-1 text-rust">•</span> Cocok kost eksklusif / kontrakan / kantor / usaha.</li>
+                            <li class="flex items-start gap-3"><span class="mt-1 text-rust">•</span> Area berkembang pesat di Jakarta Selatan.</li>
+                            <li class="flex items-start gap-3"><span class="mt-1 text-rust">•</span> Aset besar yang ideal untuk investor serius.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Project end -->
-    <!-- Process of Buying start -->
-    <section id="pembelian" class="py-16 px-5" style="background-color: #0a0f0f;">
-        <div class="container w-full md:flex md:justify-around md:items-start md:px-20 ">
-                <h1 class="font-semibold  text-3xl md:text-5xl pb-8 text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">PROSES<br>PEMBELIAN</h1>
-            <div class="caption-layanan md:w-1/2">
-                <div class="experience md:flex md:justify-center md:items-center pb-10 md:pb-20">
-                    <div class="experience-logo py-4 md:w-20 md:pr-10">
-                        <h1 class="text-2xl md:text-4xl font-bold text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">1</h1>
-                    </div>
-                    <div class="caption-experience" >
-                        <h2 class=" font-medium text-lg md:text-2xl pb-2 text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">MELIHAT RUMAH</h2>
-                        <p class="text-sm   text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Kami di sini untuk membantu Anda menemukan tempat yang tepat untuk keluarga Anda. Tergantung pada kebutuhan Anda, kami akan menyarankan properti untuk dilihat dan dipesankan untuk Anda lihat.</p>
+
+    <section id="gallery" class="py-24 px-6 md:px-10 bg-[#fdf5ee]">
+        <div class="container mx-auto">
+            <div class="max-w-3xl text-center mx-auto mb-12" data-aos="fade-up" data-aos-duration="700">
+                <span class="hero-badge">Galeri Properti</span>
+                <h2 class="mt-5 text-3xl md:text-5xl font-bold font-Ubuntu">Foto Rumah Hook Ciganjur</h2>
+                <p class="mt-4 text-slate-600">Foto unggulan dipilih agar Anda bisa melihat ruang tamu, kamar, teras hook, dan carport secara jelas.</p>
+            </div>
+            <div class="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+                <div class="rounded-[2rem] overflow-hidden shadow-xl" data-aos="fade-up" data-aos-duration="700">
+                    <img id="gallery-main" src="img/house%20(2).jpg" alt="Foto utama properti" class="w-full h-[520px] object-cover" />
+                </div>
+                <div class="grid gap-4">
+                    <img data-gallery-thumb src="img/house%20(2).jpg" alt="Foto 1" class="gallery-thumb active h-44 object-cover" />
+                    <img data-gallery-thumb src="img/house%20(3).jpg" alt="Foto 2" class="gallery-thumb h-44 object-cover" />
+                    <img data-gallery-thumb src="img/house%20(4).jpg" alt="Foto 3" class="gallery-thumb h-44 object-cover" />
+                    <img data-gallery-thumb src="img/house%20(5).jpg" alt="Foto 4" class="gallery-thumb h-44 object-cover" />
+                    <img data-gallery-thumb src="img/house%20(6).jpg" alt="Foto 5" class="gallery-thumb h-44 object-cover" />
+                    <img data-gallery-thumb src="img/house%20(7).jpg" alt="Foto 6" class="gallery-thumb h-44 object-cover" />
+                </div>
+            </div>
+            <div class="mt-14">
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                    <h3 class="text-2xl font-semibold">Photo Wall</h3>
+                    <p class="text-sm text-slate-600">Semua foto properti disusun dengan rapi di bawah.</p>
+                </div>
+                <div class="photo-wall grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                    <img src="img/house%20(1).jpg" alt="Rumah hook" />
+                    <img src="img/house%20(8).jpg" alt="Foto properti" />
+                    <img src="img/house%20(9).jpg" alt="Foto properti" />
+                    <img src="img/house%20(10).jpg" alt="Foto properti" />
+                    <img src="img/house%20(11).jpg" alt="Foto properti" />
+                    <img src="img/house%20(12).jpg" alt="Foto properti" />
+                    <img src="img/house%20(13).jpg" alt="Foto properti" />
+                    <img src="img/house%20(14).jpg" alt="Foto properti" />
+                    <img src="img/house%20(15).jpg" alt="Foto properti" />
+                    <img src="img/house%20(16).jpg" alt="Foto properti" />
+                    <img src="img/house%20(17).jpg" alt="Foto properti" />
+                    <img src="img/house%20(18).jpg" alt="Foto properti" />
+                    <img src="img/house%20(19).jpg" alt="Foto properti" />
+                    <img src="img/house%20(20).jpg" alt="Foto properti" />
+                    <img src="img/house%20(21).jpg" alt="Foto properti" />
+                    <img src="img/house%20(22).jpg" alt="Foto properti" />
+                    <img src="img/house%20(23).jpg" alt="Foto properti" />
+                    <img src="img/house%20(24).jpg" alt="Foto properti" />
+                    <img src="img/house%20(25).jpg" alt="Foto properti" />
+                    <img src="img/house%20(26).jpg" alt="Foto properti" />
+                    <img src="img/house%20(27).jpg" alt="Foto properti" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-24 px-6 md:px-10 bg-white">
+        <div class="container mx-auto">
+            <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+                <div data-aos="fade-right" data-aos-duration="700">
+                    <span class="hero-badge">Lokasi Super Strategis</span>
+                    <h2 class="mt-5 text-3xl md:text-5xl font-bold font-Ubuntu">Dekat fasilitas penting Jakarta Selatan</h2>
+                    <p class="mt-6 text-slate-600">Lokasi rumah ini berada di dekat pusat kesehatan, kampus, dan transportasi publik, sekaligus mudah diakses untuk penghuni atau penyewa.</p>
+                    <div class="mt-8 grid gap-4 text-slate-700">
+                        <div class="rounded-3xl bg-sand p-5 shadow-sm">RS Andhika</div>
+                        <div class="rounded-3xl bg-sand p-5 shadow-sm">RS Aulia</div>
+                        <div class="rounded-3xl bg-sand p-5 shadow-sm">Universitas Indonesia (UI)</div>
+                        <div class="rounded-3xl bg-sand p-5 shadow-sm">Universitas Pancasila</div>
+                        <div class="rounded-3xl bg-sand p-5 shadow-sm">ISTN</div>
+                        <div class="rounded-3xl bg-sand p-5 shadow-sm">Stasiun Lenteng Agung</div>
+                        <div class="rounded-3xl bg-sand p-5 shadow-sm">Stasiun Universitas Pancasila</div>
                     </div>
                 </div>
-                
-                <div class="experience md:flex md:justify-center md:items-center pb-10 md:pb-20" >
-                    <div class="experience-logo py-4 md:w-20 md:pr-10">
-                        <h1 class="text-2xl md:text-4xl font-bold text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">2</h1>
-                    </div>
-                     <div class="caption-experience">
-                        <h2 class=" font-medium text-lg md:text-2xl pb-2 text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">KETENTUAN NEGOSIASI</h2>
-                        <p class="text-sm   text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Setelah Anda menemukan properti impian Anda dan siap untuk mengajukan penawaran, kami akan menghubungi penjual dan menegosiasikan persyaratan terbaik yang sesuai dengan anggaran dan kebutuhan Anda.</p>
-                    </div>
-                </div>
-              
-                
-                <div class="experience md:flex md:justify-center md:items-center pb-10">
-                   <div class="experience-logo py-4 md:w-20 md:pr-10">
-                        <h1 class="text-2xl md:text-4xl font-bold text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">3</h1>
-                    </div>
-                    <div class="caption-experience" >
-                        <h2 class=" font-medium text-lg md:text-2xl pb-2 text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">TUTUP BEBAS PERAWATAN</h2>
-                        <p class="text-sm  text-white" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Kami tidak bermain-main. ini berarti pendekatan kami yang berani dan percaya diri dalam menyelesaikan properti akan membuat Anda mendapatkan kunci properti impian baru Anda.</p>
+                <div class="rounded-[2rem] overflow-hidden shadow-xl bg-[url('img/house%20(10).jpg')] bg-cover bg-center h-96" data-aos="fade-left" data-aos-duration="700">
+                    <div class="h-full w-full bg-vintage/25 p-8 flex items-end">
+                        <div class="rounded-3xl bg-white/90 p-6 shadow-lg">
+                            <p class="text-sm uppercase tracking-[0.24em] text-stone">Alamat</p>
+                            <p class="mt-3 text-xl font-semibold">Jl. Swadaya Gudang Baru No.38, Ciganjur, Jagakarsa</p>
+                            <p class="mt-2 text-sm text-slate-600">Depan Griya Swadaya Ciganjur</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Process of Buying end -->
-    <!-- Client Feedback -->
-    <section id="client" class="px-5 pt-20 pb-16 bg-slate-200">
-        <div class="container w-full" >
-            <h1 class="text-2xl md:text-6xl pb-12 font-Ubuntu" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">CLIENT FEEDBACK</h1>
-            <div class="sm:flex sm:justify-center sm:columns-2 w-full sm:px-24">
-                <div class="flex w-full justify-center sm:justify-start pb-8" >
-                    <img src="img/pria2.jpg" alt="" class="w-[40px] h-[40px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <div class="pl-3" >
-                        <h4 class="font-bold sm:text-xl pb-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                            Andi Matalatta
-                        </h4>
-                        <p class="text-sm" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                            Saya telah membeli dan menjual beberapa properti di masa lalu dengan berbagai agen penjual yang berbeda, namun tidak ada yang mendekati layanan yang kami terima di Bar House. Timnya tidak hanya terdiri dari para ahli yang tahu apa yang mereka bicarakan, namun mereka juga selalu bersedia bekerja ekstra untuk memastikan kebahagiaan dan kepuasan pelanggan. Kami tidak pernah dibiarkan menunggu jawaban. semua orang segera menghubungi kami dan kami tidak pernah merasa tidak tahu apa yang sedang terjadi. Seluruh prosesnya lancar dan kami tidak pernah merasa terburu-buru atau terdorong untuk mengambil keputusan. Sebaliknya, kami bisa meluangkan waktu untuk memutuskan segalanya, dan akhirnya menandatangani surat-suratnya dalam beberapa minggu.
-                        </p>
+
+    <section id="contact" class="py-24 px-6 md:px-10 bg-[#f5efe7]">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto grid gap-10 lg:grid-cols-2">
+                <div data-aos="fade-right" data-aos-duration="700">
+                    <span class="hero-badge">Serius Dijual</span>
+                    <h2 class="mt-5 text-3xl md:text-5xl font-bold font-Ubuntu">Jual asset – serious seller</h2>
+                    <p class="mt-6 text-slate-700">Hubungi sekarang untuk cek dokumen lengkap SHM & IMB, melihat unit, atau negosiasi. Rumah ini siap dijual cepat dengan potensi investasi tinggi.</p>
+                    <div class="mt-8 space-y-4 text-slate-700">
+                        <p><span class="font-semibold">Bentuk:</span> Corner Lot / Hook</p>
+                        <p><span class="font-semibold">Hadap:</span> Timur</p>
+                        <p><span class="font-semibold">Status:</span> SHM & IMB Lengkap</p>
                     </div>
                 </div>
-                <div class="flex w-full justify-center sm:justify-start">
-                    <img src="img/wanita1.png" alt="" class="w-[40px] h-[40px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <div class="pl-3" > 
-                        <h4 class="font-bold sm:text-xl pb-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                            Amalia Azizah
-                        </h4>
-                        <p class="text-sm" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                            aku telah mendengar banyak pujian untuk tim Bar House, karena banyak dari kalangan sosial aku yang sudah menggunakan layanan mereka untuk membeli rumah sendiri. Aku memiliki ekspektasi yang cukup tinggi, dan sangat terkejut ketika ekspektasi tersebut tidak hanya terpenuhi, tetapi juga terlampaui sejauh satu mil. Tim ini mengakomodasi semua tahapan, mulai dari melihat properti, memberikan informasi tambahan mengenai beberapa material interior, hingga menjelaskan secara rinci semua klausul dalam kontrak.
-                        </p>
-                    </div>
+                <div data-aos="fade-left" data-aos-duration="700">
+                    <form action="" class="space-y-6 rounded-[2rem] bg-white p-8 shadow-xl">
+                        <div>
+                            <label for="name" class="text-sm font-semibold text-vintage">Nama</label>
+                            <input type="text" id="name" placeholder="Masukkan nama" class="mt-2 w-full rounded-3xl border border-stone/20 bg-sand px-4 py-3 focus:border-vintage focus:outline-none" />
+                        </div>
+                        <div>
+                            <label for="email" class="text-sm font-semibold text-vintage">Email</label>
+                            <input type="email" id="email" placeholder="Masukkan email" class="mt-2 w-full rounded-3xl border border-stone/20 bg-sand px-4 py-3 focus:border-vintage focus:outline-none" />
+                        </div>
+                        <div>
+                            <label for="massage" class="text-sm font-semibold text-vintage">Pesan</label>
+                            <textarea id="massage" rows="5" placeholder="Masukkan pesan" class="mt-2 w-full rounded-3xl border border-stone/20 bg-sand px-4 py-3 focus:border-vintage focus:outline-none"></textarea>
+                        </div>
+                        <button id="btn" type="submit" class="w-full rounded-full bg-vintage px-6 py-3 text-sm font-semibold text-white hover:bg-stone transition">Kirim Pesan</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Client Feedback end -->
-    <!-- Contact -->
-    <section id="contact" class="py-32 px-7" style="background-color: #0a0f0f;">
-        <div class="container w-full sm:flex sm:justify-center sm:gap-5"
-        >
-            <div class="col-1 w-full md:w-1/2 pb-8">
-                <h1 class="text-2xl md:text-6xl font-bold text-white pb-5">CONTACT<br>US</h1>
-                <p class="text-sm text-white ">Jika Anda tertarik untuk mengetahui lebih lanjut tentang cara kami bekerja, memiliki proposal bisnis, atau tertarik untuk melakukan pembelian, kami akan senang mendengar pendapat Anda.</p>
-            </div>
-            <div class="col-1 w-full md:w-1/2">
-                <form action="">
-                    <div class="w-full mb-7">
-                        <label for="name" class="text-white">Nama</label>
-                        <input type="text" id="name" placeholder="Masukkan nama" class="w-full p-2 focus:border-yellow-500 focus:ring-1 focus:outline-none placeholder:text-sm">
-                    </div>
-                    <div class="w-full mb-7">
-                        <label for="email" class="text-white">Email</label>
-                        <input type="email" id="email" placeholder="Masukkan email" class="w-full p-2 focus:border-yellow-500 focus:ring-1 focus:outline-none placeholder:text-sm">
-                    </div>
-                    <div class="w-full mb-7">
-                        <label for="email" class="text-white">Pesan</label>
-                        <textarea type="textarea" id="massage" placeholder="Masukkan pesan" class="w-full pl-2 pt-2 pr-2 pb-4 focus:border-yellow-500 focus:ring-1 focus:outline-none placeholder:text-sm"></textarea>
-                    </div>
-                    <button id="btn" class="bg-slate-200 px-3 py-1 rounded-sm hover:bg-slate-400">Submit</button>
-                </form>
-                
-            </div>
-        </div>
-    </section>
-    <!-- Contact end -->
-    <!-- Footer -->
-    <footer id="footer" class="pt-16 pb-16 px-10 bg-slate-200">
-        <div class="container w-full md:flex md:justify-evenly  md:mx-auto pb-24">
-            <div class="pb-10">
-                <h1 class="text-4xl md:text-4xl font-bold font-Ubuntu">BARHOUSE</h1>
-            </div>
-            <div class="pb-9">
-                <h3 class="text-xl md:text-2xl font-semibold pb-2">CONTACTS</h3>
-                <p>123-456-7890</p>
-                <p>barhouse@gmail.com</p>
+
+    <footer id="footer" class="py-16 px-6 md:px-10 bg-vintage text-white">
+        <div class="container mx-auto grid gap-10 lg:grid-cols-3">
+            <div>
+                <h2 class="text-3xl font-bold">DIJUAL CEPAT CIGANJUR</h2>
+                <p class="mt-4 text-slate-200 max-w-sm">Rumah hook strategis di Jl. Swadaya Gudang Baru No.38, Ciganjur, Jagakarsa. Aset besar untuk investor yang mencari properti premium Jakarta Selatan.</p>
             </div>
             <div>
-                <h3 class="text-xl md:text-2xl font-semibold pb-2">ADDRESS</h3>
-                <p>Jl.Budi Mulia 123</p>
-                <p>Jakarta Utara</p>
+                <h3 class="text-xl font-semibold">Kontak</h3>
+                <p class="mt-3">Email: info@rumahciganjur.com</p>
+                <p>Maps: Lihat Lokasi</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold">Alamat</h3>
+                <p class="mt-3">Jl. Swadaya Gudang Baru No.38</p>
+                <p>Ciganjur, Jagakarsa, Jakarta Selatan</p>
             </div>
         </div>
-        <div class="w-full text-center">
-            <h3 class=" italic" style="font-size: 10px;">Created by <a href="https://instagram.com/_akbrrmdhn?igshid=NTc4MTIwNjQ2YQ==" class="text-yellow-700 hover:border-b-2 hover:border-yellow-700 hover:transition-all hover:duration-150"> Akbar Ramadhan</a> @2023</h3>
-        </div>
+        <div class="mt-12 text-center text-sm text-slate-300">Created by Rumah Ciganjur • All rights reserved</div>
     </footer>
-    <!-- Footer end -->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-
 
     <script>
         feather.replace()

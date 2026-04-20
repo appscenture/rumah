@@ -56,3 +56,14 @@ form.addEventListener('submit', function(e) {
     }
 })
 
+const galleryThumbs = document.querySelectorAll('[data-gallery-thumb]')
+const galleryMain = document.getElementById('gallery-main')
+
+galleryThumbs.forEach((thumb) => {
+    thumb.addEventListener('click', () => {
+        galleryThumbs.forEach((item) => item.classList.remove('active'))
+        thumb.classList.add('active')
+        galleryMain.src = thumb.src
+    })
+})
+
