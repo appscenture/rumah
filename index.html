@@ -25,7 +25,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
+            darkMode: 'media',
             theme: {
                 extend: {
                     colors: {
@@ -230,6 +230,122 @@
         textarea::placeholder {
             color: #7c5b48;
             opacity: 0.7;
+        }
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+            #nav {
+                background-color: #2a2a2a;
+                border-bottom-color: #444;
+            }
+            #nav .title a {
+                color: #e0e0e0;
+            }
+            .hamburger-line {
+                background-color: #e0e0e0;
+            }
+            #nav-menu {
+                background-color: #2a2a2a;
+            }
+            #nav-menu li {
+                border-bottom-color: #444;
+            }
+            .nav-link {
+                color: #e0e0e0;
+            }
+            .nav-link::after {
+                background-color: #b9846f;
+            }
+            .hero-badge {
+                background-color: rgba(185, 132, 111, 0.15);
+                color: #e0e0e0;
+            }
+            section {
+                background-color: #242424;
+                color: #e0e0e0;
+            }
+            #home {
+                background: linear-gradient(to bottom, #1a1a1a, #2a2a2a, #333);
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: #e0e0e0;
+            }
+            p, li, span, a:not(.nav-link) {
+                color: #d0d0d0;
+            }
+            .section-card {
+                background-color: #333;
+                color: #e0e0e0;
+            }
+            .rounded-3xl:not(img) {
+                background-color: #333;
+                color: #e0e0e0;
+            }
+            /* Form dark mode */
+            input[type="text"],
+            input[type="date"],
+            textarea {
+                background-color: #333;
+                border-color: #555;
+                color: #e0e0e0;
+            }
+            input[type="text"]:hover,
+            input[type="date"]:hover,
+            textarea:hover {
+                border-color: #b9846f;
+                background-color: #3a3a3a;
+            }
+            input[type="text"]:focus,
+            input[type="date"]:focus,
+            textarea:focus {
+                border-color: #b9846f;
+                background-color: #444;
+                box-shadow: 0 0 0 3px rgba(185, 132, 111, 0.2);
+            }
+            input::placeholder,
+            textarea::placeholder {
+                color: #999;
+            }
+            select {
+                background-color: #333;
+                border-color: #555;
+                color: #e0e0e0;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23b9846f' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            }
+            select:hover {
+                border-color: #b9846f;
+                background-color: #3a3a3a;
+            }
+            select:focus {
+                border-color: #b9846f;
+                background-color: #444;
+                box-shadow: 0 0 0 3px rgba(185, 132, 111, 0.2);
+            }
+            select option {
+                background-color: #333;
+                color: #e0e0e0;
+            }
+            /* Button styles in dark mode */
+            button {
+                color: #e0e0e0;
+            }
+            .cta-primary {
+                background-color: #845231;
+                color: white;
+            }
+            .cta-primary:hover {
+                background-color: #a0673b;
+            }
+            .cta-secondary {
+                border-color: #b9846f;
+                color: #b9846f;
+            }
+            .cta-secondary:hover {
+                background-color: rgba(185, 132, 111, 0.1);
+            }
         }
 </style>
     <title>Rumah Sitorus Ciganjur — Dijual Rumah Hook Strategis</title>
