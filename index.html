@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#b9846f">
-    <meta name="description" content="Dijual cepat rumah hook strategis Ciganjur Jakarta Selatan. 799 m² tanah, 400 m² bangunan, 7 kamar tidur, 3 kamar mandi, SHM & IMB lengkap. Cocok untuk kost, kontrakan, usaha, atau investasi.">
-    <meta property="og:title" content="DIJUAL CEPAT – RUMAH HOOK STRATEGIS CIGANJUR (JAKARTA SELATAN)">
-    <meta property="og:description" content="Rumah hook vintage classic di Jl. Swadaya Gudang Baru No.38 Ciganjur. Akses 1 mobil+1 motor, carport 5 mobil, cocok untuk kost, kontrakan, kantor atau investasi.">
+    <meta name="description" content="Rumah Sitorus Ciganjur — rumah hook premium di Jakarta Selatan. 799 m² tanah, 400 m² bangunan, 7 kamar tidur, 5 carport, SHM & IMB lengkap. Investasi strategis dekat RS dan kampus.">
+    <meta property="og:title" content="Rumah Sitorus Ciganjur – Rumah Hook Premium Dijual">
+    <meta property="og:description" content="Rumah hook corner lot di Jl. Swadaya Gudang Baru No.38 Ciganjur, Jakarta Selatan. Siap jual cepat untuk investor, kost, kontrakan, kantor, atau usaha.">
     <meta property="og:image" content="img/house%20(1).jpg">
     <meta property="og:url" content="https://maps.app.goo.gl/UsRYLTaGwu9iJASKA">
     <!-- Ubuntu -->
@@ -44,41 +44,93 @@
         }
     </script>
     <style type="text/tailwindcss">
-        button .hamburger-line {
+        .hamburger-line {
             display: block;
-            width: 30px;
-            height: 2px;
-            margin-top: 8px;
-            line-height: 5;
+            width: 28px;
+            height: 2.5px;
+            background-color: #3b2818;
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
-        .hamburger-active > span:nth-child(1) {
-            @apply rotate-45;
+        .hamburger-active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
         }
-        .hamburger-active > span:nth-child(3) {
-            @apply -rotate-45;
+        .hamburger-active .hamburger-line:nth-child(2) {
+            opacity: 0;
         }
-        .hamburger-active > span:nth-child(2) {
-            @apply scale-0;
+        .hamburger-active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
         }
         .navbar-fixed {
-            @apply fixed z-[9999];
-            backdrop-filter: blur(5px);
-            box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+            @apply fixed z-[9999] bg-white/90 border-b border-stone/10 backdrop-blur-xl;
+            box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.08);
         }
         .hero-badge {
             @apply inline-flex items-center gap-2 rounded-full bg-rust/15 px-4 py-2 text-sm font-semibold text-vintage;
         }
+        .nav-link {
+            @apply text-base md:text-lg text-vintage transition duration-300 hover:text-rust font-medium;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #b9846f;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            @apply text-rust font-bold;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .cta-button {
+            @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-300 ease-out;
+        }
+        .cta-primary {
+            @apply bg-vintage text-white shadow-xl shadow-vintage/20 hover:bg-stone hover:text-vintage transform hover:-translate-y-1;
+        }
+        .cta-secondary {
+            @apply border border-vintage bg-white text-vintage hover:bg-white/95 transform hover:-translate-y-1;
+        }
+        .section-card {
+            @apply rounded-[2rem] bg-white/90 p-8 shadow-[0_30px_90px_-40px_rgba(59,40,24,0.25)] transition duration-300 hover:-translate-y-1;
+        }
+        .gallery-strip {
+            @apply flex items-center gap-4 overflow-x-auto pb-3 snap-x snap-mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+        .hide-scrollbar {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
         .gallery-thumb {
-            @apply w-full rounded-3xl object-cover border border-transparent shadow-lg transition-all duration-300;
+            @apply shrink-0 rounded-3xl object-cover border border-transparent shadow-lg transition-all duration-300 ease-out w-44 h-40;
+            scroll-snap-align: start;
         }
         .gallery-thumb:hover {
-            @apply border-rust ring-2 ring-rust/40;
+            @apply border-rust ring-2 ring-rust/40 scale-[1.02];
         }
         .gallery-thumb.active {
             @apply ring-4 ring-rust/50 border-rust;
         }
         .photo-wall img {
-            @apply h-40 w-full rounded-2xl object-cover;
+            @apply h-40 w-full rounded-2xl object-cover transition duration-300 ease-out hover:scale-[1.02];
+        }
+        html {
+            scroll-behavior: smooth;
         }
         html, body {
             overflow-x: hidden;
@@ -92,26 +144,113 @@
         .container {
             max-width: 100%;
         }
-    </style>
-    <title>DIJUAL CEPAT – RUMAH HOOK STRATEGIS CIGANJUR (JAKARTA SELATAN)</title>
+        @media (max-width: 768px) {
+            #nav-menu {
+                z-index: 50;
+            }
+            #nav-menu.hidden {
+                display: none !important;
+            }
+            #nav-menu li {
+                border-bottom: 1px solid rgba(212, 197, 181, 0.3);
+            }
+            #nav-menu li:last-child {
+                border-bottom: none;
+            }
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Form Styling */
+        input[type="text"],
+        input[type="date"],
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            background-color: #f3e1ca;
+            border: 1.5px solid #d4c5b5;
+            color: #3b2818;
+        }
+        input[type="text"]:hover,
+        input[type="date"]:hover,
+        textarea:hover {
+            border-color: #b9846f;
+            background-color: #faf6f1;
+        }
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        textarea:focus {
+            border-color: #845231;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(181, 132, 113, 0.1);
+            outline: none;
+        }
+        /* Custom Select Styling */
+        select {
+            appearance: none;
+            background-color: #f3e1ca;
+            border: 1.5px solid #d4c5b5;
+            color: #3b2818;
+            padding-right: 2.5rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23845231' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            cursor: pointer;
+        }
+        select:hover {
+            border-color: #b9846f;
+            background-color: #faf6f1;
+        }
+        select:focus {
+            border-color: #845231;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(181, 132, 113, 0.1);
+            outline: none;
+        }
+        select option {
+            background-color: white;
+            color: #3b2818;
+            padding: 0.5rem;
+        }
+        /* Input Placeholder */
+        input::placeholder,
+        textarea::placeholder {
+            color: #7c5b48;
+            opacity: 0.7;
+        }
+</style>
+    <title>Rumah Sitorus Ciganjur — Dijual Rumah Hook Strategis</title>
 </head>
 <body class="bg-sand text-vintage">
-    <nav id="nav" class="w-full bg-white/95 backdrop-blur-sm flex justify-between items-center h-16 px-6 md:px-10 shadow-sm">
-        <div class="title">
-            <a href="#home" class="font-bold text-lg md:text-xl font-Ubuntu tracking-wide">DIJUAL CEPAT CIGANJUR</a>
-        </div>
-        <div class="flex items-center">
-            <button id="hamburger" class="block absolute right-4 md:hidden text-vintage">
-                <span class="hamburger-line origin-top-left transition duration-100 bg-vintage"></span>
-                <span class="hamburger-line transition duration-100 bg-vintage"></span>
-                <span class="hamburger-line origin-bottom-left transition duration-100 bg-vintage"></span>
+    <nav id="nav" class="w-full bg-white/90 border-b border-stone/10 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 flex justify-between items-center h-16">
+            <div class="title">
+                <a href="#home" class="font-bold text-lg md:text-xl font-Ubuntu tracking-wide">Rumah Sitorus Ciganjur</a>
+            </div>
+            <button id="hamburger" class="md:hidden block text-vintage p-2 flex flex-col gap-1.5">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </button>
-            <ul id="nav-menu" class="md:flex hidden z-[9999] bg-white/95 shadow-lg rounded-full py-2 px-3 gap-2">
-                <li><a href="#home" class="text-sm text-vintage hover:text-rust transition">Home</a></li>
-                <li><a href="#detail" class="text-sm text-vintage hover:text-rust transition">Detail</a></li>
-                <li><a href="#gallery" class="text-sm text-vintage hover:text-rust transition">Galeri</a></li>
-                <li><a href="#location" class="text-sm text-vintage hover:text-rust transition">Lokasi</a></li>
-                <li><a href="#contact" class="text-sm text-vintage hover:text-rust transition">Kontak</a></li>
+            <ul id="nav-menu" class="hidden md:flex gap-8 absolute md:relative top-16 md:top-0 left-0 right-0 md:left-auto md:right-auto flex-col md:flex-row w-full md:w-auto bg-white md:bg-transparent">
+                <li><a href="#home" class="nav-link block md:inline px-6 md:px-0 py-4 md:py-0">Home</a></li>
+                <li><a href="#detail" class="nav-link block md:inline px-6 md:px-0 py-4 md:py-0">Detail</a></li>
+                <li><a href="#gallery" class="nav-link block md:inline px-6 md:px-0 py-4 md:py-0">Galeri</a></li>
+                <li><a href="#location" class="nav-link block md:inline px-6 md:px-0 py-4 md:py-0">Lokasi</a></li>
+                <li><a href="#contact" class="nav-link block md:inline px-6 md:px-0 py-4 md:py-0">Kontak</a></li>
             </ul>
         </div>
     </nav>
@@ -119,12 +258,17 @@
     <section id="home" class="pt-20 pb-24 bg-gradient-to-b from-sand via-parchment to-white">
         <div class="container mx-auto px-6 md:flex md:items-center md:justify-between">
             <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="700">
-                <span class="hero-badge">DIJUAL CEPAT • RUMAH HOOK</span>
+                <span class="hero-badge">Rumah Sitorus Ciganjur</span>
                 <h1 class="mt-6 text-4xl md:text-6xl font-bold leading-tight">Rumah Hook Strategis Ciganjur<br class="hidden sm:block">Jakarta Selatan</h1>
                 <p class="mt-6 max-w-2xl text-base md:text-lg text-slate-700">Rumah vintage classic corner lot 799 m² tanah dan 400 m² bangunan. Hadap Timur, akses jalan 1 mobil + 1 motor, carport 5 mobil, sangat cocok untuk kost, kontrakan, kantor, usaha, atau investasi jangka panjang.</p>
+                <div class="mt-6 flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-stone">
+                    <span class="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-2 shadow-sm">Verified Listing</span>
+                    <span class="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-2 shadow-sm">SHM & IMB Ready</span>
+                    <span class="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-2 shadow-sm">Corner Lot Hook</span>
+                </div>
                 <div class="mt-8 flex flex-wrap gap-4">
-                    <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-vintage px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-vintage/20 hover:bg-stone transition">Tanya Sekarang</a>
-                    <a href="https://maps.app.goo.gl/UsRYLTaGwu9iJASKA" target="_blank" class="inline-flex items-center justify-center rounded-full border border-vintage bg-white px-6 py-3 text-sm font-semibold text-vintage hover:bg-vintage/5 transition">Lihat Lokasi</a>
+                    <a href="#contact" class="cta-button cta-primary">Tanya Sekarang</a>
+                    <a href="https://maps.app.goo.gl/UsRYLTaGwu9iJASKA" target="_blank" class="cta-button cta-secondary">Lihat Lokasi</a>
                 </div>
                 <div class="mt-10 grid gap-4 sm:grid-cols-2">
                     <div class="rounded-3xl bg-white p-5 shadow-lg">
@@ -160,7 +304,7 @@
                 <p class="mt-4 text-slate-600">Rumah komersial hook strategis Jl. Swadaya Gudang Baru No.38, Ciganjur, Jagakarsa. Legal lengkap SHM & IMB. Ideal untuk investor, kost eksklusif, kontrakan, kantor, atau usaha.</p>
             </div>
             <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-                <div class="rounded-[2rem] bg-sand p-8 shadow-xl" data-aos="fade-right" data-aos-duration="700">
+                <div class="section-card bg-sand/90" data-aos="fade-right" data-aos-duration="700">
                     <p class="text-sm uppercase tracking-[0.24em] text-stone">Properti Utama</p>
                     <h3 class="mt-5 text-2xl font-semibold">Rumah Hook Vintage Classic</h3>
                     <p class="mt-4 text-slate-700">Corner lot hook dengan bangunan luas. Hadap Timur, akses jalan 1 mobil + 1 motor, carport 5 mobil, kondisinya vintage classic dan siap untuk segera dijual.</p>
@@ -184,7 +328,7 @@
                     </div>
                 </div>
                 <div class="space-y-6">
-                    <div class="rounded-[2rem] bg-vintage/5 p-8 shadow-xl" data-aos="fade-left" data-aos-duration="700">
+                    <div class="section-card bg-vintage/5" data-aos="fade-left" data-aos-duration="700">
                         <h3 class="text-2xl font-semibold">Spesifikasi Lengkap</h3>
                         <ul class="mt-6 space-y-3 text-slate-700">
                             <li class="rounded-3xl bg-white p-4 shadow-sm">7 Kamar Tidur</li>
@@ -197,7 +341,7 @@
                             <li class="rounded-3xl bg-white p-4 shadow-sm">Status SHM & IMB Lengkap</li>
                         </ul>
                     </div>
-                    <div class="rounded-[2rem] bg-white p-8 border border-stone/10 shadow-xl" data-aos="fade-left" data-aos-duration="700">
+                    <div class="section-card bg-white border border-stone/10" data-aos="fade-left" data-aos-duration="700">
                         <h3 class="text-2xl font-semibold">Potensi & Kelebihan</h3>
                         <ul class="mt-6 space-y-3 text-slate-700">
                             <li class="flex items-start gap-3"><span class="mt-1 text-rust">•</span> Lokasi hook → akses & visibilitas tinggi.</li>
@@ -216,48 +360,21 @@
             <div class="max-w-3xl text-center mx-auto mb-12" data-aos="fade-up" data-aos-duration="700">
                 <span class="hero-badge">Galeri Properti</span>
                 <h2 class="mt-5 text-3xl md:text-5xl font-bold font-Ubuntu">Foto Rumah Hook Ciganjur</h2>
-                <p class="mt-4 text-slate-600">Foto unggulan dipilih agar Anda bisa melihat ruang tamu, kamar, teras hook, dan carport secara jelas.</p>
+                <p class="mt-4 text-slate-600">Pilih foto yang ingin Anda lihat langsung, lalu geser thumbnail untuk menemukan sudut ruangan terbaik.</p>
             </div>
-            <div class="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+            <div class="max-w-6xl mx-auto">
                 <div class="rounded-[2rem] overflow-hidden shadow-xl" data-aos="fade-up" data-aos-duration="700">
                     <img id="gallery-main" src="img/house%20(2).jpg" alt="Foto utama properti" class="w-full h-[520px] object-cover" />
                 </div>
-                <div class="grid gap-4">
-                    <img data-gallery-thumb src="img/house%20(2).jpg" alt="Foto 1" class="gallery-thumb active h-44 object-cover" />
-                    <img data-gallery-thumb src="img/house%20(3).jpg" alt="Foto 2" class="gallery-thumb h-44 object-cover" />
-                    <img data-gallery-thumb src="img/house%20(4).jpg" alt="Foto 3" class="gallery-thumb h-44 object-cover" />
-                    <img data-gallery-thumb src="img/house%20(5).jpg" alt="Foto 4" class="gallery-thumb h-44 object-cover" />
-                    <img data-gallery-thumb src="img/house%20(6).jpg" alt="Foto 5" class="gallery-thumb h-44 object-cover" />
-                    <img data-gallery-thumb src="img/house%20(7).jpg" alt="Foto 6" class="gallery-thumb h-44 object-cover" />
-                </div>
-            </div>
-            <div class="mt-14">
-                <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
-                    <h3 class="text-2xl font-semibold">Photo Wall</h3>
-                    <p class="text-sm text-slate-600">Semua foto properti disusun dengan rapi di bawah.</p>
-                </div>
-                <div class="photo-wall grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-                    <img src="img/house%20(1).jpg" alt="Rumah hook" />
-                    <img src="img/house%20(8).jpg" alt="Foto properti" />
-                    <img src="img/house%20(9).jpg" alt="Foto properti" />
-                    <img src="img/house%20(10).jpg" alt="Foto properti" />
-                    <img src="img/house%20(11).jpg" alt="Foto properti" />
-                    <img src="img/house%20(12).jpg" alt="Foto properti" />
-                    <img src="img/house%20(13).jpg" alt="Foto properti" />
-                    <img src="img/house%20(14).jpg" alt="Foto properti" />
-                    <img src="img/house%20(15).jpg" alt="Foto properti" />
-                    <img src="img/house%20(16).jpg" alt="Foto properti" />
-                    <img src="img/house%20(17).jpg" alt="Foto properti" />
-                    <img src="img/house%20(18).jpg" alt="Foto properti" />
-                    <img src="img/house%20(19).jpg" alt="Foto properti" />
-                    <img src="img/house%20(20).jpg" alt="Foto properti" />
-                    <img src="img/house%20(21).jpg" alt="Foto properti" />
-                    <img src="img/house%20(22).jpg" alt="Foto properti" />
-                    <img src="img/house%20(23).jpg" alt="Foto properti" />
-                    <img src="img/house%20(24).jpg" alt="Foto properti" />
-                    <img src="img/house%20(25).jpg" alt="Foto properti" />
-                    <img src="img/house%20(26).jpg" alt="Foto properti" />
-                    <img src="img/house%20(27).jpg" alt="Foto properti" />
+                <div class="mt-8 overflow-x-auto hide-scrollbar" data-aos="fade-up" data-aos-duration="700">
+                    <div class="gallery-strip px-1">
+                        <img data-gallery-thumb src="img/house%20(2).jpg" alt="Foto 1" class="gallery-thumb active" />
+                        <img data-gallery-thumb src="img/house%20(3).jpg" alt="Foto 2" class="gallery-thumb" />
+                        <img data-gallery-thumb src="img/house%20(4).jpg" alt="Foto 3" class="gallery-thumb" />
+                        <img data-gallery-thumb src="img/house%20(5).jpg" alt="Foto 4" class="gallery-thumb" />
+                        <img data-gallery-thumb src="img/house%20(6).jpg" alt="Foto 5" class="gallery-thumb" />
+                        <img data-gallery-thumb src="img/house%20(7).jpg" alt="Foto 6" class="gallery-thumb" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -293,6 +410,19 @@
         </div>
     </section>
 
+    <section id="map" class="py-24 px-6 md:px-10 bg-[#f7ede3]">
+        <div class="container mx-auto">
+            <div class="max-w-3xl text-center mx-auto mb-12" data-aos="fade-up" data-aos-duration="700">
+                <span class="hero-badge">Google Maps</span>
+                <h2 class="mt-5 text-3xl md:text-5xl font-bold font-Ubuntu">Lokasi Rumah Sitorus Ciganjur</h2>
+                <p class="mt-4 text-slate-600">Temukan posisi tepat rumah hook ini di peta, dengan akses langsung ke rute dan landmark utama.</p>
+            </div>
+            <div class="rounded-[2rem] overflow-hidden border border-stone/10 shadow-xl">
+                <iframe class="w-full h-[460px] border-0" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Jl.+Swadaya+Gudang+Baru+No.38,+Ciganjur,+Jagakarsa,+Jakarta+Selatan&output=embed"></iframe>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="py-24 px-6 md:px-10 bg-[#f5efe7]">
         <div class="container mx-auto">
             <div class="max-w-4xl mx-auto grid gap-10 lg:grid-cols-2">
@@ -312,15 +442,49 @@
                             <label for="name" class="text-sm font-semibold text-vintage">Nama</label>
                             <input type="text" id="name" placeholder="Masukkan nama" class="mt-2 w-full rounded-3xl border border-stone/20 bg-sand px-4 py-3 focus:border-vintage focus:outline-none" />
                         </div>
+
                         <div>
-                            <label for="email" class="text-sm font-semibold text-vintage">Email</label>
-                            <input type="email" id="email" placeholder="Masukkan email" class="mt-2 w-full rounded-3xl border border-stone/20 bg-sand px-4 py-3 focus:border-vintage focus:outline-none" />
+                            <label for="visit-date" class="text-sm font-semibold text-vintage">Tanggal Kunjungan</label>
+                            <input type="date" id="visit-date" class="mt-2 w-full rounded-3xl border border-stone/20 bg-sand px-4 py-3 focus:border-vintage focus:outline-none" />
                         </div>
                         <div>
-                            <label for="massage" class="text-sm font-semibold text-vintage">Pesan</label>
-                            <textarea id="massage" rows="5" placeholder="Masukkan pesan" class="mt-2 w-full rounded-3xl border border-stone/20 bg-sand px-4 py-3 focus:border-vintage focus:outline-none"></textarea>
+                            <label for="city" class="text-sm font-semibold text-vintage block">Kota Asal</label>
+                            <select id="city" name="city" class="mt-2 w-full rounded-3xl border border-stone/20 bg-sand px-4 py-3 focus:border-vintage focus:outline-none">
+                                <option value="">Pilih Kota</option>
+                                <option value="Jakarta - DKI Jakarta">Jakarta - DKI Jakarta</option>
+                                <option value="Bandung - Jawa Barat">Bandung - Jawa Barat</option>
+                                <option value="Bogor - Jawa Barat">Bogor - Jawa Barat</option>
+                                <option value="Bekasi - Jawa Barat">Bekasi - Jawa Barat</option>
+                                <option value="Depok - Jawa Barat">Depok - Jawa Barat</option>
+                                <option value="Tangerang - Banten">Tangerang - Banten</option>
+                                <option value="Serang - Banten">Serang - Banten</option>
+                                <option value="Surabaya - Jawa Timur">Surabaya - Jawa Timur</option>
+                                <option value="Malang - Jawa Timur">Malang - Jawa Timur</option>
+                                <option value="Sidoarjo - Jawa Timur">Sidoarjo - Jawa Timur</option>
+                                <option value="Yogyakarta - DI Yogyakarta">Yogyakarta - DI Yogyakarta</option>
+                                <option value="Semarang - Jawa Tengah">Semarang - Jawa Tengah</option>
+                                <option value="Solo - Jawa Tengah">Solo - Jawa Tengah</option>
+                                <option value="Medan - Sumatera Utara">Medan - Sumatera Utara</option>
+                                <option value="Palembang - Sumatera Selatan">Palembang - Sumatera Selatan</option>
+                                <option value="Pekanbaru - Riau">Pekanbaru - Riau</option>
+                                <option value="Jambi - Jambi">Jambi - Jambi</option>
+                                <option value="Bandar Lampung - Lampung">Bandar Lampung - Lampung</option>
+                                <option value="Denpasar - Bali">Denpasar - Bali</option>
+                                <option value="Makassar - Sulawesi Selatan">Makassar - Sulawesi Selatan</option>
+                                <option value="Manado - Sulawesi Utara">Manado - Sulawesi Utara</option>
+                                <option value="Balikpapan - Kalimantan Timur">Balikpapan - Kalimantan Timur</option>
+                                <option value="Banjarmasin - Kalimantan Selatan">Banjarmasin - Kalimantan Selatan</option>
+                                <option value="Pontianak - Kalimantan Barat">Pontianak - Kalimantan Barat</option>
+                                <option value="Jayapura - Papua">Jayapura - Papua</option>
+                                <option value="Kupang - Nusa Tenggara Timur">Kupang - Nusa Tenggara Timur</option>
+                                <option value="Mataram - Nusa Tenggara Barat">Mataram - Nusa Tenggara Barat</option>
+                            </select>
                         </div>
-                        <button id="btn" type="submit" class="w-full rounded-full bg-vintage px-6 py-3 text-sm font-semibold text-white hover:bg-stone transition">Kirim Pesan</button>
+                        <div>
+                            <label for="message" class="text-sm font-semibold text-vintage">Catatan</label>
+                            <textarea id="message" rows="4" placeholder="Tulis kebutuhan atau preferensi kunjungan" class="mt-2 w-full rounded-3xl border border-stone/20 bg-sand px-4 py-3 focus:border-vintage focus:outline-none"></textarea>
+                        </div>
+                        <button id="btn" type="submit" class="w-full rounded-full bg-vintage px-6 py-3 text-sm font-semibold text-white hover:bg-stone transition">Atur Janji</button>
                     </form>
                 </div>
             </div>
@@ -330,13 +494,13 @@
     <footer id="footer" class="py-16 px-6 md:px-10 bg-vintage text-white">
         <div class="container mx-auto grid gap-10 lg:grid-cols-3">
             <div>
-                <h2 class="text-3xl font-bold">DIJUAL CEPAT CIGANJUR</h2>
-                <p class="mt-4 text-slate-200 max-w-sm">Rumah hook strategis di Jl. Swadaya Gudang Baru No.38, Ciganjur, Jagakarsa. Aset besar untuk investor yang mencari properti premium Jakarta Selatan.</p>
+                <h2 class="text-3xl font-bold">Rumah Sitorus Ciganjur</h2>
+                <p class="mt-4 text-slate-200 max-w-sm">Rumah hook premium di Jl. Swadaya Gudang Baru No.38, Ciganjur, Jagakarsa. Aset eksklusif untuk investor dan pembeli yang mencari properti strategis Jakarta Selatan.</p>
             </div>
             <div>
                 <h3 class="text-xl font-semibold">Kontak</h3>
-                <p class="mt-3">Email: info@rumahciganjur.com</p>
-                <p>Maps: Lihat Lokasi</p>
+                <p class="mt-3">WhatsApp: +62 858-8933-8867</p>
+                <p>Maps: Lihat lokasi di atas</p>
             </div>
             <div>
                 <h3 class="text-xl font-semibold">Alamat</h3>
@@ -344,7 +508,7 @@
                 <p>Ciganjur, Jagakarsa, Jakarta Selatan</p>
             </div>
         </div>
-        <div class="mt-12 text-center text-sm text-slate-300">Created by Rumah Ciganjur • All rights reserved</div>
+        <div class="mt-12 text-center text-sm text-slate-300">Created by Rumah Sitorus Ciganjur • All rights reserved</div>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
