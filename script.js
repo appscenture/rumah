@@ -29,11 +29,12 @@ const button = document.getElementById('btn')
 const form = document.querySelector('form')
 
 form.addEventListener('submit', function(e) {
-    const inputName = document.querySelector('#name').value;
-    const inputEmail = document.querySelector('#email').value;
-    const textarea = document.querySelector('#massage').value;
+    const inputName = document.querySelector('#name').value.trim();
+    const inputEmail = document.querySelector('#email').value.trim();
+    const textarea = document.querySelector('#massage').value.trim();
 
-    if( !inputName || !inputEmail || !textarea ) {
+    if ( !inputName || !inputEmail || !textarea ) {
+        e.preventDefault()
         Swal.fire({
             title: 'Oops!',
             text: 'kolomnya harap diisi semua',
@@ -41,19 +42,13 @@ form.addEventListener('submit', function(e) {
             showConfirmButton : true,
             confirmButtonText: 'OK'
         })
-        
-            e.preventDefault()
+        return
     }
 
-    else {
-        Swal.fire({
-            title: 'Yeay',
-            text: 'Permintaanmu sedang kami proses!',
-            icon: 'success',
-            showConfirmButton : true,
-            confirmButtonText: 'OK'
-        })
-    }
+    e.preventDefault()
+    const whatsappText = `Saya tertarik dengan rumah hook strategis Ciganjur.\nNama: ${inputName}\nEmail: ${inputEmail}\nPesan: ${textarea}`
+    const whatsappUrl = `https://wa.me/6285889338867?text=${encodeURIComponent(whatsappText)}`
+    window.open(whatsappUrl, '_blank')
 })
 
 const galleryThumbs = document.querySelectorAll('[data-gallery-thumb]')
